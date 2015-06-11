@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>贝单词</title>
+		<link rel="icon" href="./images/title.ioc" type="image/x-iocn" />
+		<link rel="stylesheet" href="./css/main.css" type="text/css">
+		<link rel="stylesheet" href="./css/nav.css" type="text/css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+		<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav-main">
+				<a class="logo" href="#"><img src="./images/logo.png"></a>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">背单词</a></li>
+					<li><a href="#">考试</a></li>
+					<li><a href="#">复习</a></li>
+				</ul>
+				<form action="url">
+					<input type="text" name="search" placeholder="查词" />
+					<input class="search" type="image" src="./images/search.png" />
+				</form>
+				<div id="select" onmouseover="overDiv()" onmouseout="outDiv()">
+					<a class="name" href="#">用户名<img src="./images/navdown.png"></a>
+					<div id="select2">
+						<div class="first">
+							<a href="#">错过的单词</a>
+							<a href="#">我的等级</a>
+						</div>
+						<div class="second">
+							<a href="#">设置</a>
+							<a href="#">退出</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 导航栏 -->
+		<div style="height:110px;width:100%"></div>
+		<!-- 填充导航固定布局 -->
+		 <div class="main">
+			<div id="prompt">
+				<span>今天还有可背单词</span>
+				<a href="#">查看详情</a>
+				<a class="cancel" href="javascript:cancel()"></a>
+			</div><!-- 提示条 -->
+			<div class="row">
+				<a class="span1">
+					<div class="span-top">背单词</div>
+					<div class="word">
+						<b>单词,</b>你以为26个字母组成你就都认识了吗？别看了，戳进来背吧！
+					</div>
+					<div class="span3">
+						去看看
+					</div>
+				</a>
+				<a class="span1">
+					<div class="span-top">考试</div>
+					<div class="word">
+						<b>复习,</b>你以为背一遍就永远记住了？别逗了，点进来看看吧！
+					</div>
+					<div class="span3">
+						去看看
+					</div>
+				</a>
+				<a class="span2">
+					<div class="span-top">复习</div>
+					<div class="word">
+						<b>考试,</b>你以为复习完就搞定了？别闹了，不经历考试是没有用的！
+					</div>
+					<div class="span3">
+						去看看
+					</div>
+				</a>
+			</div>	<!-- 块状导航 -->
+			<div class="famous">
+				<p>I do not believe a man can ever leave his business. He ought to think of it by day and dream of it by night.</p>
+				<p>我不认为一个人可以离开他的事业。他应该在白天思考它，在晚上梦见它。</p>
+				<br />
+				<p class="people">--Henry Ford</p>
+			</div> <!-- 名人名言 -->
+				<div class="footer">
+				<a class="book" href="#"><img src="./images/book.png" alt=""></a>
+				<a class="book" href="#"><img src="./images/book.png" alt=""></a>
+				<a class="book" href="#"><img src="./images/book.png" alt=""></a>
+				<a class="book" href="#"><img src="./images/book.png" alt=""></a>
+				<a class="book" href="#"><img src="./images/book.png" alt=""></a>
+				<a class="book" href="#"><img src="./images/book.png" alt=""></a>
+				<a class="book2" href="#"><img src="./images/book.png" alt=""></a>
+			</div>
+		</div> 
+	</body>
+</html>

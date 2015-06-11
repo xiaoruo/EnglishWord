@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+}
+body{
+	background-color: #E4E4E4;
+}
+.nav{
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	background-color: #E4E4E4;
+	border-bottom: 1px solid #D5D4D4;
+	box-shadow: #D5D4D4 0 1px 10px 1px;
+	z-index:99;
+}
+.nav-main{
+	width: 1200px;
+	height: 70px;
+	margin: 0 auto;
+}
+.nav-main .logo{
+	display: inline-block;
+	height: 70px;
+}
+.nav-main .logo img{
+	height: 70px;
+}
+.nav-main ul{
+	display: inline-block;
+	width: 40%;
+	height: 70px;
+}
+.nav-main ul li{
+	float: left;
+	list-style-type: none;
+	padding: 40px 0 0 30px;
+	font-size: 1.1em;
+}
+#select a{
+	position: relative;
+}
+.nav-main ul li a,
+#select .name{
+	color: #000;
+}
+.nav-main ul li a:hover,
+#select .name:hover{
+	color: #4e4e4e;
+}
+.nav-main form{
+	display: inline-block;
+	position: relative;
+	bottom:17px;
+	right: 15%;
+}
+.nav-main form input{
+	height: 24px;
+	border:1px solid #CCCCCC;
+}
+.nav-main .search{
+	background-color: #EEEEEE; 
+	position: relative;
+	left: -9px;
+	top: 9.0px;
+}
+#select{
+	position: relative;
+	float: right;
+	margin-top: 40px;
+	width: 100px;
+
+}
+#select .name{
+	position: absolute;
+	right: 0px;
+	font-size: 1.0em;
+}
+#select2{
+	display: none;
+	position: relative;
+	width: 120px;
+	height: 157px;
+	border:1px solid #CCCCCC;
+	border-radius: 5px;
+	background-color:#fff;
+	margin-top: 27px;
+	box-shadow: #D5D4D4 0 1px 1px 1px;
+	z-index: 99;
+}
+#select2 .first{
+	height: 67px;
+	margin-top: 10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+#select2 .second{
+	margin-top: 10px;
+}
+#select2 a{
+	display: block;
+	width: 92%;
+	height: 20px;
+	padding: 10px 0 0 10px;
+	font-size: 0.9em;
+	color: #000;
+	line-height: 15px;
+}
+#select2 a:hover{
+	color: #fff;
+	background-color: #209e85;
+}

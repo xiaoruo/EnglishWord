@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背单词</title>
+	<link rel="icon" href="./images/title.ioc" type="image/x-iocn" />
+	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="./css/register.css" type="text/css">
+	<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+	<script>
+		addLoadEvent(gundong);
+	</script>
+	<div class="nav">
+		<a class="logo" href="#"><img src="./images/logo.png"></a>
+		<ul>
+			<li><a href="javascript:alert('请先注册或登陆！')">首页</a></li>
+			<li><a href="javascript:alert('请先注册或登陆！')">背单词</a></li>
+			<li><a href="javascript:alert('请先注册或登陆！')">考试</a></li>
+			<li><a href="javascript:alert('请先注册或登陆！')">复习</a></li>
+		</ul>
+		<span>
+			<a style="color:#68C39F" href="javascript:register()" >注册</a>|
+			<a style="color:#3D94F5" href="javascript:register1()">登陆</a>
+		</span>
+	</div>
+	<div id="register">
+		<div class="register">
+			<b>注册</b>
+			<form action="url">
+				<label for="author">用户名：</label>
+				<input type="text" name="author" id="author" placeholder="只能包含数字、字母、下划线" />
+				<i class="icon-user"></i>
+				<label for="password">密码：</label>
+				<input type="password" name="password" id="password" placeholder="请输入密码"/>
+				<i class="icon-lock"></i>
+				<label for="affrim">确认密码：</label>
+				<input type="password" name="affrim" id="affrim" placeholder="请再次输入密码"/>
+				<i class="icon-lock"></i>
+				<label for="veri">验证码：</label>
+				<input type="text" name="veri" id="veri" placeholder="不区分大小写，点击图片换一幅" />
+				<img src="./images/veri.png" />
+				<input type="submit" value="注册" id="buttom" />
+			</form>
+		</div>
+		<div class="share">
+			<img src="./images/share.png" alt="">
+		</div>
+	</div>
+	<div id="register1">
+		<div class="register">
+			<b>登陆</b>
+			<form action="url">
+				<label for="author">用户名：</label>
+				<input type="text" name="author" id="author" />
+				<i class="icon-user"></i>
+				<label for="password">密码：</label>
+				<input type="password" name="password" id="password" />
+				<i class="icon-lock"></i>
+				<input type="submit" value="登陆" id="buttom" />
+			</form>
+		</div>
+		<div class="share1">
+			<img src="./images/share.png" alt="">
+		</div>
+	</div>
+	<div class="word">
+		<img src="./images/cover_notebook.png" >
+		<b>贝单词</b><br/>
+		<span>科学有效的词汇训练和测试
+          派生，词根，联想..... 丰富的记忆方法
+          结合柯林斯高阶词典，专业权威的英英释义</span>
+	</div>
+	<div class="mobile">
+		<img src="./images/cover_mobile.png" >
+		<b>贝阅读</b><br/>
+		<span>所有生词和词组，即点即查
+              遇到的生词，可以一键添加进学习计划，由系统自动安排复习
+              学以致用，文中会自动高亮所有你学过的单词</span>
+	</div>
+	<div class="exam">
+		<img src="./images/cover_sentence.png" >
+		<b>贝考试</b><br/>
+		<span>所有生词和词组，即点即查
+              遇到的生词，可以一键添加进学习计划，由系统自动安排复习
+              学以致用，文中会自动高亮所有你学过的单词</span>
+	</div>
+	<div class="footed">
+		<ul>
+			<b>友情链接</b>
+			<li><a href="http://dict.youdao.com/">有道</a></li>
+			<li><a href="http://translate.google.cn/">google翻译</a></li>
+			<li><a href="http://www.iciba.com/">金山词霸</a></li>
+			<li><a href="http://fanyi.baidu.com/#auto/zh/">百度翻译</a></li>
+		</ul>
+		<ul>
+			<b>关于我们</b>
+			<li><a href="javascript:alert('我们就在您身边')">联系我们</a></li>
+			<li><a href="javascript:alert('您每天都能看到我们')">关注我们</a></li>
+			<li><a href="javascript:alert('过段时间再说吧！')">加入我们</a></li>
+			<li><a href="#">后台登陆</a></li>
+		</ul>
+		<ul>
+			<b>开发者</b>
+			<li>付加星</li>
+			<li>田静思</li>
+		</ul>
+		<p>Copyright &copy 2014 版权所有：计科122班</p>
+	</div>
+	<a href="javascript:;" id="btns" class="icon-chevron-up icon-2x"></a>
+</body>
+</html>

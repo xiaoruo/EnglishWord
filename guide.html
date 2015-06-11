@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贝单词</title>
+	<link rel="icon" href="./images/title.ioc" type="image/x-iocn" />
+	<link rel="stylesheet" href="./css/main.css" type="text/css">
+	<link rel="stylesheet" href="./css/nav.css" type="text/css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+	<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav-main">
+			<a class="logo" href="#"><img src="./images/logo.png"></a>
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">背单词</a></li>
+				<li><a href="#">考试</a></li>
+				<li><a href="#">复习</a></li>
+			</ul>
+			<form action="url">
+				<input type="text" name="search" placeholder="查词" />
+				<input class="search" type="image" src="./images/search.png" />
+			</form>
+			<div id="select" onmousemove="overDiv()" onmouseout="outDiv()">
+				<a class="name" href="#">用户名<img src="./images/navdown.png"></a>
+				<div id="select2">
+					<div class="first">
+						<a href="#">我的空间</a>
+						<a href="#">我的等级</a>
+					</div>
+					<div class="second">
+						<a href="#">设置</a>
+						<a href="#">退出</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 导航栏 -->
+	<div style="height:110px;width:100%"></div>
+	<!-- 填充导航固定布局 -->
+	<div class="guide">
+		<form action="#" method="get">
+			<h1>向导</h1>
+			<p>选择你希望学习的等级</p>
+			<table class="cal" summary="the grade you choose" cellspacing="0">
+				<tr>
+					<th><input type="submit" value="四级" id="choose0" /></th>
+					<th><input type="submit" value="六级" id="choose1" /></th>
+					<th><input type="submit" value="考研" id="choose2" /></th>
+					<th>托福</th>
+					<th>雅思</th>
+					<th>GRE</th>
+					<th id="bgi"><a href="javascript:show()"></a></th>
+				</tr>
+				<tr id="none">
+					<th>托业</th>
+					<th>GMAT</th>
+					<th>SAT</th>
+					<th>高中</th>
+					<th>初中</th>
+					<th>小学</th>
+					<th> </th>
+				</tr>
+			</table>
+			<div style="width:1115px ; height:0 ; border: 1px solid #CCCCCC ; margin-bottom:200px;"></div>
+			<div id="number">
+				<p>选择你希望学习的数量</p>
+				<table class="cal" summary="the number you choose" cellspacing="0">
+					<tr>
+						<th><input type="radio" name="number" checked />每天20个</th>
+						<th><input type="radio" name="number" />每天30个</th>
+						<th><input type="radio" name="number" />每天40个</th>
+					</tr>
+				</table>
+				<p>你需要40分钟左右的时间来完成每天的学习，包括复习旧的单词和学习新的单词<p>
+				<p>完成今天的任务后，你还可以选择去考试来检验学习成果</p>
+				<input type="submit" value="完成" id="buttom" />
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贝单词</title>
+	<link rel="icon" href="./images/title.ioc" type="image/x-iocn" />
+	<link rel="stylesheet" href="./css/main.css" type="text/css">
+	<link rel="stylesheet" href="./css/nav.css" type="text/css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+	<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav-main">
+			<a class="logo" href="#"><img src="./images/logo.png"></a>
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">背单词</a></li>
+				<li><a href="#">考试</a></li>
+				<li><a href="#">复习</a></li>
+			</ul>
+			<form action="url">
+				<input type="text" name="search" placeholder="查词" />
+				<input class="search" type="image" src="./images/search.png" />
+			</form>
+			<div id="select" onmousemove="overDiv()" onmouseout="outDiv()">
+				<a class="name" href="#">用户名<img src="./images/navdown.png"></a>
+				<div id="select2">
+					<div class="first">
+						<a href="#">我的空间</a>
+						<a href="#">我的等级</a>
+					</div>
+					<div class="second">
+						<a href="#">设置</a>
+						<a href="#">退出</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 导航栏 -->
+	<div style="height:110px;width:100%"></div>
+	<!-- 填充导航固定布局 -->
+	<div class="word-main">
+		<div class="word-main-head" id="word">
+			<h1 id="word_block">
+				all out
+			</h1><!-- 显示单词 -->
+			<a href="#" class="icon-edit icon-2x" title="背单词"></a>
+			<!-- 点击拼写单词 -->
+			<a href="#" class="icon-heart icon-2x jiaru" title="加入笔记本"></a>
+			<!-- 点击将此单词加入笔记本 -->
+			<a href="javascript:alert('此单词已加入记事本！')" style="visibility: hidden"class="icon-heart icon-2x" title="已加入笔记本"></a>
+			<!--  站位置的 -->
+		</div>
+		<div class="word-main-explain">
+			<span>&nbsp&nbsp单词解释</span>
+			<div class="explain">
+				全力以赴, 竭尽全力
+			</div>
+		</div>
+		<div class="word-main-example">
+			<span>&nbsp&nbsp例句</span>
+			<div class="example">
+				全力以赴, 竭尽全力lnlcnsflnlcknelsdkjfvnol
+				ncslknlnlnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+				bacjkjkjk
+				a
+			</div>
+		</div>
+		<div style="width:100%;height: 100px"></div>
+		<div class="word-main-select">
+			<a href="#" class="select-remember">
+				<span class="remember">
+					1
+				</span>&nbsp&nbsp
+				<span>认识</span>
+			</a>
+			<a href="#" class="select-unremember">
+				<span class="remember">
+					2
+				</span>&nbsp&nbsp
+				<span>不认识</span>
+			</a>
+		</div>
+	</div>
+	<div id="mask">
+		<div class="pinxie">
+			<h2>拼写练习</h2>
+			<p>vt.到达（得，达到，得出）</p>
+			<a href="#"class="icon-remove"></a>
+			<!-- 调取当前单词汉语意思 -->
+			<h3>拼写必须和单词完全一致</h3>
+			<input type="text" name="author" id="pinxie"  />
+		</div>
+	</div>
+</body>
+<script>
+	addLoadEvent(tanchuceng);
+	var muDi = document.getElementById('select');
+	var mudi = muDi.getElementsByTagName('a').item(0);
+	var Elme = document.getElementById('word');
+	var elme = Elme.getElementsByTagName('a').item(1);
+	var setTop = getElementTop(mudi);
+	var setLeft = getElementLeft(mudi);
+	var setTop2 = getElementTop(elme);
+	var setLeft2 = getElementLeft(elme);
+	var setY = setTop2 - setTop;
+	var setX = setLeft - setLeft2;
+	var i = 1;
+	elme.onclick = function() {
+		Elme.getElementsByTagName('a').item(2).style.visibility = "visible";
+		vatrial = setInterval("xiaode()", 50);
+		vatrial2 = setInterval("next()", 50);
+	}
+
+	function getElementLeft(element) {
+		var actualLeft = element.offsetLeft;
+		var current = element.offsetParent;
+		while (current !== null) {
+			actualLeft += current.offsetLeft;
+			current = current.offsetParent;
+		}
+		return actualLeft;
+	}
+
+	function getElementTop(element) {
+		var actualTop = element.offsetTop;
+		var current = element.offsetParent;
+		while (current !== null) {
+			actualTop += current.offsetTop;
+			current = current.offsetParent;
+		}
+		return actualTop;
+	}
+
+	function xiaode() {
+		setLeft2 = setLeft2 + setX / 5;
+		setTop2 = setTop2 - setY / 5;
+		elme.style.position = "fixed";
+		elme.style.top = setTop2 + 'px';
+		elme.style.left = setLeft2 + 'px';
+		elme.style.zIndex = "99999";
+		if (setTop2 == setTop ) {
+			clearInterval(vatrial);
+		}
+	}
+
+	function next() {
+		i = i - 0.2;
+		elme.style.color = "rgba(31,158,133," + i + ")";
+		if (i == 0) {
+			clearInterval(vatrial2);
+		}
+	}
+</script>
+</html>
